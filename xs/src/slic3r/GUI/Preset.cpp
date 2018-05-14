@@ -102,7 +102,6 @@ void Preset::normalize(DynamicPrintConfig &config)
 				continue;
             auto *opt = config.option(key, false);
             assert(opt != nullptr);
-            assert(opt->is_vector());
             if (opt != nullptr && opt->is_vector())
                 static_cast<ConfigOptionVectorBase*>(opt)->resize(n, defaults.option(key));
         }

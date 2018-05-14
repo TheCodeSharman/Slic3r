@@ -476,8 +476,8 @@ PrintConfigDef::PrintConfigDef()
     def->min = 0;
     def->default_value = new ConfigOptionFloats { 0. };
     
-    def = this->add("filament_settings_id", coStrings);
-    def->default_value = new ConfigOptionStrings { "" };
+    def = this->add("filament_settings_id", coString );
+    def->default_value = new ConfigOptionString { "" };
 
     def = this->add("fill_angle", coFloat);
     def->label = "Fill angle";
